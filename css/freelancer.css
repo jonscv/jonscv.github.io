@@ -38,7 +38,7 @@ h6 {
 
 hr.star-light,
 hr.star-primary {
-    margin: 130px auto 50px;
+    margin: 10px auto 80px;
     padding: 0;
     max-width: 250px;
     border: 0;
@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #bbc0cf;
+    background: #18bc9c;
 }
 
 header .container {
@@ -171,19 +171,23 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    padding: 10px 0;
 }
 
 section h2 {
-    margin: 0;
+    margin: 100px;
     font-size: 3em;
 }
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: grey;
 }
 
+section.accomplishments {
+    color: #fff;
+    background: darkblue;
+}
 @media(max-width:767px) {
     section {
         padding: 75px 0;
