@@ -3,458 +3,438 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<title>Jonathan Ah-Yoon's CV</title>
+	<meta name="viewport" content="width=device-width" />
+	<style>
+		/**
+ * "Variables"
+ */
 
-    <title>Jons CV</title>
+		h1,
+		h2,
+		.date {
+			font: small-caps normal 100% Constantia, 'Palatino Linotype', Palatino, Georgia, serif;
+		}
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		h1,
+		header>h1>span,
+		header>ul>li:before {
+			color: #9BBB59;
+		}
+		/**
+ * Style
+ */
 
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+		* {
+			margin: 0;
+		}
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		html {
+			background: #9BA2B0;
+			font-size: 14px;
+		}
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link href="css/flexbox.css" rel="stylesheet">
+		body {
+			width: 65em;
+			padding: 7em 8%;
+			box-sizing: border-box;
+			margin: 1em auto;
+			background: white;
+			box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, .3);
+			font: 100%/1.6 'Segoe UI', Optima, 'Hiragino Kaku Gothic Pro', 'Apple Gothic', Tahoma, 'Helvetica Neue', sans-serif;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto;
+			-o-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+			-moz-transition: .5s font-size;
+			-ms-transition: .5s font-size;
+			-o-transition: .5s font-size;
+			-webkit-transition: .5s font-size;
+			transition: .5s font-size;
+		}
+
+		h1,
+		h2 {
+			page-break-after: avoid;
+		}
+
+		h1 {
+			margin-top: 1.2em;
+			font-size: 180%;
+		}
+
+		h2 {
+			margin-top: 1em;
+			font-size: 150%;
+		}
+
+		a {
+			color: #4F6128;
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted #4F6128;
+			cursor: help;
+		}
+
+		p {
+			margin: .6em 0;
+		}
+
+		h1+p,
+		h2+p {
+			margin-top: 0;
+		}
+
+		ul {
+			padding: 0;
+			list-style: square;
+		}
+
+		ul ul {
+			padding-left: 3em;
+		}
+
+		header {
+			text-align: center;
+		}
+
+		header>h1 {
+			color: #7F7F7F;
+			border-bottom: 1px solid #9BBB59;
+			margin: 0 0 .15em;
+			text-indent: 1.2em;
+			font-size: 370%;
+			line-height: 1.05;
+			font-variant: normal;
+		}
+
+		header>h1>span {
+			display: inline-block;
+			margin-left: -2.7em;
+			vertical-align: super;
+			font-size: 50%;
+		}
+
+		header>ul {
+			display: block;
+			margin-bottom: .5em;
+		}
+
+		header>ul>li {
+			display: inline;
+			list-style: none;
+		}
+
+		header>ul>li:before {
+			content: '● ';
+		}
+
+		header>ul>li:first-child:before {
+			content: none;
+		}
+
+		address {
+			font-style: normal;
+		}
+
+		ol.timeline {
+			padding: 0;
+			border: 0 solid #ddd;
+			border-width: 4px 0;
+		}
+
+		ol.timeline>li {
+			list-style: none;
+			padding: .4em 0;
+			border: 1px solid white;
+			/* Chrome printing bug */
+			border-top-color: #ccc;
+		}
+
+		ol.timeline>li:first-child {
+			border-top: 0;
+		}
+
+		ol.timeline>li>p {
+			margin: 0;
+		}
+
+		ol.timeline>li>.date {
+			float: left;
+			margin-left: .1em;
+			max-width: 8rem;
+			color: gray;
+			font-size: 110%;
+		}
+
+		ol.timeline>li>.date~p {
+			margin-left: 9rem;
+		}
+
+		.note {
+			margin-top: .4em;
+			font-size: 75%;
+		}
+
+		.note a:not(:hover):not(:active) {
+			color: inherit;
+		}
+
+		footer {
+			margin-top: 3em;
+			font-style: italic;
+		}
+
+		.amp {
+			font-style: italic;
+		}
+
+		#projects .timeline li p:nth-of-type(2) a:first-of-type {
+			font-weight: bold;
+		}
+
+		@media (max-width:950px) {
+			html {
+				font-size: 12px;
+			}
+		}
+
+		@media (max-width:700px) {
+			html {
+				font-size: 11px;
+			}
+		}
+
+		@media (max-width:600px) {
+			body {
+				width: auto;
+				margin: 1em;
+			}
+		}
+
+		@media print {
+			html {
+				background: none;
+			}
+			body {
+				box-shadow: none;
+			}
+			header>h1 {
+				color: black;
+			}
+			footer {
+				display: none;
+			}
+		}
+	</style>
 
 </head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62451232-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<!-- publitas dissertation-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62451232-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Jonathan Ah-Yoon </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-
-                        <a href="#contact"></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-
-<!--/**************************************************************************
-START: 2 COLUMN LAYOUT FOR DESKTOP screen
-**************************************************************************/-->
-
-<div id="wrapper">
-  <section id="primary">
-    <img class="img-responsive" src="img/wordcloud2.jpg" alt="" class="profile-photo">
-    <div class="intro-text">
-
-  </section>
-  <section id="secondary">
-    <section id="primary">
-      <img class="img-responsive" src="img/wordcloud2.jpg" alt="" class="profile-photo">
-      <div class="intro-text">
-
-  </section>
-
-</div>
-
-<!--/**************************************************************************
-END: 2 COLUMN LAYOUT FOR DESKTOP screen
-**************************************************************************/-->
-
-
-	<section id="INTRO">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-                    <div class="intro-text">
-                        <span class="name">Here you will learn about my acquired learnings, experiences, achievements, beliefs, values, thoughts and everything in-between.  In this way you the reader will gain a more in-depth snapshot of what I have to offer.</span>
-               <hr class="star-light">
-                        <span class="skills"></span>
-
-					</div>
-                </div>
-            </div>
-        </div>
-		</section>
-    </header>
-
-			<!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
 
-			<div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/qualifications.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/dissertation.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/itskills.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/projects.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/generalinterests.png" class="img-responsive" alt="">
-
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/resized/psychometrics.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-
-                    <div class="footer-col col-md-12">
-                        <h3>LINKS</h3>
-                        <ul class="list-inline">
-
-                            <li>
-                                <a href="https://uk.linkedin.com/in/jonathanahyoon" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-12">
-                        <h3></h3>
-                        <p>For more fun please see my <a href="https://uk.linkedin.com/in/jonathanahyoon">LinkedIn Profile</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Jonathan's CV 2015
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>CV</h2>
-                            <iframe src="https://view.publitas.com/p222-3420/cv/" title="My publications - cv"
-        width="100%"
-        height="700px"
-        style="display:block; background:transparent"
-        frameborder="0" allowfullscreen
-        onload='(function (f,w) { var d; function l (e){ if(e.source == f.contentWindow && (d = JSON.parse(e.data).embed)) { new Function("frame","parent",d)(f,w) } }; w.attachEvent ? w.attachEvent("onmessage", l) : w.addEventListener("message",l, false); setTimeout(function () { f.contentWindow.postMessage("[\"embed\", \"embedded\"]","*") }) })(this, window)'></iframe>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>DISSERTATION</h2>
-                            <hr class="star-primary">
-                            </a>
-							<iframe src="https://view.publitas.com/p222-3420/agile-principles-as-facilitators-in-the-effective-delivery-od-digital-innovative-products-in-uk-firms/" title="My publications - Agile Principles as Facilitators in the Effective Delivery od Digital Innovative Products in UK Firms"
-        width="100%"
-        height="700px"
-        style="display:block; background:transparent"
-        frameborder="0" allowfullscreen
-        onload='(function (f,w) { var d; function l (e){ if(e.source == f.contentWindow && (d = JSON.parse(e.data).embed)) { new Function("frame","parent",d)(f,w) } }; w.attachEvent ? w.attachEvent("onmessage", l) : w.addEventListener("message",l, false); setTimeout(function () { f.contentWindow.postMessage("[\"embed\", \"embedded\"]","*") }) })(this, window)'></iframe>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>IT Skills, Certificates, Projects</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/resized/skillspop.PNG" class="img-responsive img-centered" alt="">
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>PROJECTS- more to be added soon</h2>
-							<p>Techbar Ticket Management Project (General Electric)</p>
-                            <img src="img/portfolio/resized/techbar.png" class="img-responsive img-centered" alt="">
-                           <p> SSM Rich Picture Diagram, Action model, and Recommendations.</p>
-						   <iframe src="https://view.publitas.com/p222-3420/ssm/" title="My publications - SSM"
-        width="100%"
-        height="700px"
-        style="display:block; background:transparent"
-        frameborder="0" allowfullscreen
-        onload='(function (f,w) { var d; function l (e){ if(e.source == f.contentWindow && (d = JSON.parse(e.data).embed)) { new Function("frame","parent",d)(f,w) } }; w.attachEvent ? w.attachEvent("onmessage", l) : w.addEventListener("message",l, false); setTimeout(function () { f.contentWindow.postMessage("[\"embed\", \"embedded\"]","*") }) })(this, window)'></iframe>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
- <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h1>RECENT ACTIVITIES</h1>
-
-                            <p> Here is a list of talks and workshops attended recently:</p>
-
-<p>13/06/2015 - Appathon (Android) Guinness World Records Challenge</p>
-<p>12/06/2015 - Entrepreneurial Developments in Consultancy: What makes a successful consultant </p>
-<p>08/06/2015 - Effective communication (Body language, better presentations) 05/06/2015 - Drawing at the British Museum </p>
-<p>29/05/2015 - Design Thinking - An Emerging Problem Solving Approach</p>
-<p>25/05/2015 - Can you work from anywhere? (Citrix, Mobile administration)</p>
-<p>14/05/2015 - Agile Project Management</p>
-
-<H1>SPORTS</H1>
-<p>-	Cycled from London to Brighton; London to Oxford, London to Ireland </p>
-<p>-	Competed in Amateur Thai Boxing competition,</p>
-<p>-	Tennis, Table Tennis, </p>
-<p>-	Wimbledon Ball Boy (1995)</p>
-
-
-<H1>MUSIC</H1>
-<p></p>Played Piano (Grade 4 distinction) in concert hall on special occassion</p>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>PSYCHOMETRIC TESTING</h2>
-                            <img src="img/portfolio/resized/psychometricspop.PNG" class="img-responsive img-centered" alt="">
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-
+<body>
+	<!--IDEA: ADD BOOTSTRAP A LINK OPEN DIRECTLY TO CV. DONT LINK TO DIGITAL PORTFOLIO
+	AS ITS AN EXTRA STEP.-->
+	<!--IDEA: HAVE ACTUAL EVIDENCE OF WORKING WEBSITES-->
+
+	<header>
+		<h1>Jonathan Ah-yoon <span>CV</span></h1>
+		<ul>
+			<li><strong><!--FIXME: CHANGE URL--><a href="https://jonscv.github.io">Digital Portfolio</a></strong></li>
+			<li>
+				<!--FIXME: CHANGE URL-->
+				<a href="https://github.com/">Github</a>
+			</li>
+		</ul>
+	</header>
+
+	<section id="summary">
+		<h1>Summary</h1>
+		<p>A talented and hardworking MSc graduate specializing in Digital Entrepreneurship, with experience in Project Management (Agile, PRINCE2), Business Analysis, and Web/Software development. I have several years’ experience working for major firms (<strong><a href="https://en.wikipedia.org/wiki/Facebook">Facebook</a></strong>,
+			<strong><a href="https://en.wikipedia.org/wiki/Facebook">Conservative Party</a></strong>, <strong><a href="https://en.wikipedia.org/wiki/Deloitte">Deloitte</a></strong>, <strong><a href="https://en.wikipedia.org/wiki/General_Electric">General Electric</a></strong>,<strong><a href="https://www.pcfg.co.uk/about-us">PCFG)</a></strong>			within Business Analysis, IT Service Management and IT Support. In my spare time I enjoy cycling, going to the gym, martial arts, and reading up on the latest literature on innovation, creativity, and digital. I’m currently advancing my skills in Front
+			and Back-End Web Development studying for a Tech degree at <strong><a href="https://teamtreehouse.com/home">Team Treehouse University.</strong>
+		</p>
+	</section>
+	</a>
+
+	<section id="work-experience">
+		<h1>Work experience</h1>
+
+		<h2>Industry</h2>
+		<ol class="timeline">
+			<li>
+				<p class="date">2016<br></p>
+				<p>-Deliveroo Cyclist</p>
+				<p>-Studying full-time for a Tech Degree.</p>
+				<p>
+			</li>
+			<li>
+				<p class="date">2014-2016</p>
+				<p>-Business Analyst at <a href="https://www.pcfg.co.uk/about-us">PCFG</p></a>
+			</li>
+
+			</li>
+			<li>
+				<p class="date">2012–2013</p>
+				<p>
+					Senior IT Support at <a href="http://Ge.com">GE</a>
+				</p>
+				<p class="note">P.M, B.A, Apple, Windows, trouble shooting, problem solving</p>
+			</li>
+			<li>
+				<p class="date">2011–2012</p>
+				<p>IT Business Analyst working for
+					<!--FIXME: CHANGE URL-->
+					<a href="http://deloitte.com">Deloitte</a>
+				</p>
+				<p class="note"></p>
+			</li>
+		</ol>
+
+		<h2>Academic</h2>
+		<ol class="timeline">
+			<li>
+				<p class="date">2013-2014</p>
+				<p>In depth research carried out at Goldsmiths University on <a href="https://view.publitas.com/p222-3420/agile-principles-as-facilitators-in-the-effective-delivery-od-digital-innovative-products-in-uk-firms/">Agile Project Management and Innovation</a></p>
+				</a>
+				</p>
+			</li>
+
+		</ol>
+	</section>
+
+	<section id="industry-recognition">
+		<h1>Industry recognition</h1>
+		<ul>
+			<li> Business Analysis Foundation certification (2015)</li>
+			<li> PRINCE2 foundation (2013) Candidate number: P2R/988382 - ILX Group plc</li>
+			<li> CCNA (Cisco Certified Network Associate – 2009)</li>
+		</ul>
+	</section>
+
+	<section id="projects">
+		<h1>Selected projects</h1>
+		<ol class="timeline">
+			<li>
+				<p class="date">Feb 2015</p>
+				<p>
+					<!--FIXME: CHANGE URL-->
+					<a href="http://http://private&commercialfinance.co.uk">PCFG (Private Commercial Finance Group)</a>
+					<p class="note">Business Analyst October 2015 - to date</p>
+					<!-- <p class="note"> -->
+					<p class="note"><strong>AIM:</strong> Business analysis and UAT software testing for companies systems. <strong>OBJECTIVES:</strong> Improving efficiencies as part of banking license application. <strong>TASKS:</strong> A series of business analysis techniques were
+						employed such as Requirements gathering for the eQuote system. Rich Picture Diagram, Business Activity Modelling, Flow charts, Swimlane Diagramming, and Gap Analysis (Current and Future State Analysis) for proposed Document Management System. Also,
+						responsible for writing procedure and policy guides and training users on new system. <strong>RESULT: </strong>Improved my ability to elicit and gather requirements, presented process re-engineering diagramming to Finance Director with good feedback,
+						improved my policy and procedure documentation. Trained up in Data Architecture Design working alongside consultants to roll out new Document Management System. This involved specifying security groups, programming objects, data types, data definitions.
+					</p>
+			</li>
+
+			<li>
+				<p class="date">Feb 2015</p>
+
+				<p>
+					<!--FIXME: CHANGE URL--><a href="http://http://goldsmiths.co.uk">GOLDSMITHS UNIVERSITY (FULL-TIME STUDENT)</a>
+
+					<p class="note"><strong> AIM:</strong> To embrace entrepreneurship as a philosophy, using digital as a tool to innovate, addressing needs and problems for all types of Stakeholder. <strong>OBJECTIVES</strong> MSc Digital Entrepreneurship degree challenged students
+						to develop several mini-projects under deliberate time constraint. <strong>TASKS:</strong> Utilized Front-End and Back-End Web Technologies, Project Management Approaches, Business Analysis methods. <strong>RESULT:</strong> Completed Dating website,
+						Job Board, Twitter Data Mining, Soft System Methodology, Business Case, Business Planning, Digital Research sentiment scraping. Setup Goldsmith University Book Review and Presentation Club (2014). <strong>KEY SKILLS gained</strong> Agile, Scrum,
+						Business Analysis, Python, Ruby on Rails, Javascript, PHP, MySQL, HTML5, CSS3, Heroku, Bitbucket, <a href="https://github.com/jahyoon">GIT version control</a>, Test Driven Development (TDD), Behaviour Driven Development (BDD).
+
+					</p>
+				</p>
+
+				<li>
+					<p class="date">Jul 2012</p>
+					<p>
+						<a href="http://">Travel</a>
+					</p>
+					<p class="note">8 Months travel through Asia DEC 2010-JULY 2011 Taught English and attended Muay Thai camp</p>
+					<li>
+						<p class="date">Jul 2012</p>
+						<p>
+							<a href="http://">	TICKET MANAGEMENT PROJECT at General Electric</a></p>
+						<p class="note"><strong>AIM:</strong>To deliver superior levels of IT service to VIP clientel. <strong>OBJECTIVES:</strong> To develop ticketing system for the purpose of better managing tickets for CEO, Directors, and their staff. Initiated in response to poor
+							service feedback.<strong>TASKS:</strong> Elicited requirements from operational and strategic stakeholders for development of logging, tracking, monitoring, and statistical report generation system. <strong>RESULTS</strong> This culminated in a
+							50% increase in team efficiency and much improved project reporting.Increase in team efficiency, management reporting, stock provisioning, and resource planning.
+						</p>
+	</section>
+
+	<section id="education">
+		<h1>Education</h1>
+		<ol class="timeline">
+			<li>
+				<p class="date">2013–2014</p>
+				<p><strong>MSc in Digital Entrepreneurship</strong> -Pass</p>
+				<p class="note">
+					<a href="http://www.gold.ac.uk/about/">Goldsmiths University</a>
+				</p>
+			</li>
+			<li>
+				<p class="date">1998–2002</p>
+				<p><strong> BSc in Business Information Technology</strong> -Pass</p>
+				<p class="note">
+					<a href="https://www.westminster.ac.uk/about-us">University of Westminster</a>
+				</p>
+			</li>
+		</ol>
+	</section>
+
+	<section id="technical-skills">
+		<h1>Technical skills</h1>
+		<ul>
+			Twitter Bootstrap HTML5, CSS3, MySQL, PHP, Java, Github, Python, Ruby on Rails.
+		</ul>
+	</section>
+
+	<section id="technical-skills">
+
+			<li> PROJECT MANAGEMENT</li>
+			<p>WHAT:</p>
+			<p> Experience working in Agile and Waterfall environments. I have certifications in PRINCE 2, Business Analysis and a MSc Dissertation on Agile Project management. I am familiar with the following PM tools: SCRUM, TRELLO, Pivotal Labs, VISIO, Lucid
+			charts.</p>
+			<p> WHEN:</p>
+			<p>Utilised a hybrid blend of Business Analysis and Project management while at General Electric and the Conservative Party HQ.</p>
+			<li> BUSINESS ANALYSIS</li>
+			<p>WHAT:</p>
+			<p>Experience creating Business Cases, and utilizing <a href="https://view.publitas.com/p222-3420/ssm/">Rich Picture Diagramming</a>, CATWOE, Business Activity Modelling, Gap Analysis (Solution Identification i.e. requirements), Business Process Modelling, UML,
+			Swimlane diagramming, Business Model Innovation, Creative Ideation Methods, Agile, User Stories, Use Case Diagrams, User stories, Visio, Prototyping-Lucid charts, and fishbone diagrams. <p>WHEN:</p> <p> Business Analysis skills utilized during MSc degree and
+			General Electric project.</p>
+			<li> SOFT SKILLS</li>
+			<p>WHAT:</p>
+			<p>Facilitation skills, Presentations skills.</p>
+			<p>WHEN:</p>
+			<p>Setup of Goldsmiths University Book Review and Presentation Club (2014), Attended 6 months of Toastmasters public speaking club.</p>
+			<li> RESEARCH</li>
+			<p>WHAT:</p>
+			<p> Conducted an MSc Dissertation on Agile Project Management. Qualitative Research techniques were utilized such as Semi-structured interviewing, NVIVO 10 - qualitative data analysis (QDA). Experience with Quantitative Research techniques such as surveys
+			and questionnaires. Familiar with a range of Digital Research methods and tools (Social network analysis, SPSS).</p> <p>WHEN:</p> <p> In depth research carried out at Goldsmiths University. To view MSc dissertation on Agile Project Management go to: https://view.publitas.com/p222-3420/agile-principles-as-facilitators-in-the-effective-delivery-od-digital-innovative-products-in-uk-firms/
+		</p>
+	</section>
+
+	<section id="interests">
+		<h1>Interests</h1>
+		<li>SPORTS</li>
+		-Cycled from London to Brighton, London to Oxford, London to Ireland -Competed in Amateur Thai Boxing competition, -Tennis, Table Tennis, -Wimbledon Ball Boy (1995)
+		<li>MUSIC</li>
+		Played Piano (Grade 4 distinction) in concert hall on special occasion
+		<li> RECENT ACTIVITIES</li>
+		Talks and workshops attended recently: - Appathon (Android) Guinness World Records Challenge - Entrepreneurial Developments in Consultancy: What makes a successful consultant - Effective communication (Body language, better presentations) - Design Thinking
+		- An Emerging Problem Solving Approach - Can you work from anywhere? (Citrix, Mobile administration) - Agile Project Management
+	</section>
+
+	<footer>
+		<p>References are available upon request.</p>
+	</footer>
+
+	<script>
+		(function() {
+			if (!document.querySelectorAll) return;
+			var external = document.querySelectorAll('a[href^="http://"], a[href^="https://"]'),
+				a;
+			for (var i = external.length; a = external[--i];) a.setAttribute('target', '_blank');
+		})();
+	</script>
 </body>
 
 </html>
